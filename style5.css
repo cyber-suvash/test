@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #bgimage {
+    background-image: url(img/todo.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    min-height: auto;
+    z-index: 2;
+    color: #002765;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+  }
+  
+  #to-do {
+    width: 100%;
+    max-width: 540px;
+    padding: 30px 50px 80px;
+    border-radius: 20px;
+    margin: 30px;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+  }
+  
+  #to-do h2 {
+    color: #002765;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .row {
+    border-radius: 30px;
+    background: #edeef0;
+    min-height: 50px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  #input-box {
+    flex: 1;
+    min-width: 150px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Caveat", cursive;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  button:hover {
+    background: blueviolet;
+    transition: 0.4s;
+  }
+  
+  ul li {
+    list-style: none;
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+    padding: 10px 40px 10px 30px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin: 7px;
+    border-radius: 20px;
+    word-break: break-word;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  ul li::before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 21px;
+    background-image: url(img/checkbox-blank-circle-line.png);
+    background-size: cover;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+  }
+  
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::before {
+    background-image: url(img/checkbox.png);
+  }
+  
+  ul li span {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ul li span:hover {
+    background: hsl(0, 94%, 62%);
+    border-radius: 50%;
+  }
+  
+  #Datebox{
+    font-size: 1.2rem;
+    position: absolute;
+    left: 52%;
+    top: 0px;
+    font-weight: 900;
+    
+   
+  }
+
+  #Timebox{
+    position:absolute;
+    top: 20px;
+    left: 70%;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+
+  /* Base styles for very small devices (below 320px) */
+  @media screen and (max-width: 320px) {
+    .container {
+      width: 90%;
+      padding: 10px;
+    }
+    
+    #to-do {
+      padding: 15px;
+      margin: 5px;
+    }
+    
+    #to-do h2 {
+      font-size: 1.2rem;
+    }
+    
+    #input-box {
+      font-size: 16px;
+    }
+    
+    button {
+      width: 70px;
+      height: 32px;
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  
+    ul li {
+      font-size: 18px;
+      padding: 8px 35px 8px 25px;
+    }
+  
+    ul li::before {
+      height: 18px;
+      width: 18px;
+    }
+  
+    ul li span {
+      width: 35px;
+      height: 35px;
+      font-size: 30px;
+    }
+  }
+  
+  /* Mobile devices (321px to 480px) */
+  @media screen and (min-width: 321px) and (max-width: 480px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    #to-do {
+      padding: 20px;
+      margin: 10px;
+    }
+  
+    #to-do h2 {
+      font-size: 1.5rem;
+    }
+  
+    #input-box {
+      font-size: 18px;
+    }
+  
+    button {
+      width: 80px;
+      height: 35px;
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  
+    ul li {
+      font-size: 20px;
+      padding: 8px 38px 8px 28px;
+    }
+  
+    ul li span {
+      width: 38px;
+      height: 38px;
+      font-size: 40px;
+    }
+  }
+  
+  /* Tablets (481px to 768px) */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
+      width: 85%;
+    }
+  
+    #to-do {
+      padding: 25px 35px 60px;
+      margin: 20px;
+    }
+  
+    #to-do h2 {
+      font-size: 1.8rem;
+    }
+  
+    #input-box {
+      font-size: 22px;
+    }
+  
+    button {
+      width: 90px;
+      height: 38px;
+      font-size: 18px;
+    }
+  
+    ul li {
+      font-size: 24px;
+    }
+  
+    ul li span {
+      width: 42px;
+      height: 42px;
+      font-size: 45px;
+    }
+  }
+  
+  /* Laptops and larger tablets (769px to 1024px) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      width: 80%;
+    }
+  
+    #to-do {
+      padding: 28px 40px 70px;
+      margin: 25px;
+    }
+  }
+  
+  /* Desktop (1025px and above) */
+  @media screen and (min-width: 1025px) {
+    .container {
+      width: 70%;
+    }
+  }
