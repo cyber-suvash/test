@@ -92,12 +92,12 @@
   }
 
 #datebox{
-border: none;
+border: 1px solid black;
 border-radius: 30px;
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #timebox{
-border: none;
+border: 1px solid black;
 border-radius: 30px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
