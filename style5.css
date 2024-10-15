@@ -71,6 +71,17 @@
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+
+#datebox{
+border: 2px solid black;
+border-radius: 30px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#timebox{
+border: 2px solid black;
+border-radius: 30px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
   
   button {
     border: none;
@@ -90,19 +101,6 @@
     background: blueviolet;
     transition: 0.4s;
   }
-
-#datebox{
-border: 2px solid black;
-border-radius: 30px;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#timebox{
-border: 2px solid black;
-border-radius: 30px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-  
-
   
   ul li {
     list-style: none;
@@ -166,7 +164,6 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     top: 0px;
     font-weight: 900;
     
-   
   }
 
   #Timebox{
@@ -296,6 +293,13 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-size: 45px;
     }
   }
+  #Datebox{
+    position: absolute;
+    left: 40%;
+    top: -0.5vh;
+  }
+
+  
   
   /* Laptops and larger tablets (769px to 1024px) */
   @media screen and (min-width: 769px) and (max-width: 1024px) {
