@@ -25,9 +25,6 @@ console.log(`Reminder set for ${task} at ${reminderDate}`);
 
 
 
-
-
-
 function setReminder(task, date, time) {
     const now = new Date();
     const reminderDate = new Date(`${date}T${time}`);
@@ -50,9 +47,6 @@ function setReminder(task, date, time) {
         console.log("The reminder date/time is in the past.");
     }
 }
-
-
-
 
 
 
@@ -84,19 +78,32 @@ function createList() {
 
 
     let dateElement=document.createElement('label')
-    dateElement.innerHTML=date.value
+    dateElement.textContent=formatDateTime(date.value,time.value)
     dateElement.setAttribute('id','Datebox')
     li.appendChild(dateElement)
 
-    let timeElement=document.createElement('label')
-    timeElement.innerHTML=time.value
-    timeElement.setAttribute('id','Timebox')
-    li.appendChild(timeElement)
+    // let dateTimeElement = document.createElement('label');
+    // dateTimeElement.textContent = formatDateTime(date.value, time.value);
+    // dateTimeElement.setAttribute('id', 'DateTimeBox');
+    // li.appendChild(dateTimeElement);
+    
     
     let span = document.createElement('span');
     span.innerHTML = "\u00d7";
     li.appendChild(span);
     count++;
+
+    function formatDateTime(date, time) {
+        const dateObj = new Date(`${date}T${time}`);
+        return dateObj.toLocaleString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric', 
+            hour: 'numeric', 
+            minute: 'numeric', 
+            hour12: true 
+        });
+    }
     
     setReminder(inputbox.value, date.value, time.value);
 }
